@@ -1,9 +1,41 @@
 
-html{
-color-scheme: dark;
-}
-body {
+html, body {
+
+  height: 100%;
+  margin: 0;
+  overflow: none;
+  display: flex;
+  flex-direction: column;
   background-color: var(--negro);
+}
+
+
+main {
+
+  flex: 1;
+
+}
+
+footer {
+
+  padding: 20px 0;
+
+}
+
+
+.sticky-top {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1040;
+ 
+
+}
+
+.rounded-3 {
+border-radius: 50px;
 }
 
 /* Color Palette */
@@ -21,6 +53,9 @@ body {
 background-color: var(--negro)!important;
 }
 
+.light-bg {
+  background-color: var(--blanco)!important;
+  }
 
 /* Fonts */
 @font-face {
@@ -60,11 +95,27 @@ background-color: var(--negro)!important;
 }
 
 /* Text */
+
 h5 {
-  color: var(--gris_100);
+color: var(--gris_100);
 font-weight: 500;
 text-transform: uppercase;
 font-size: 0.9rem;
+}
+
+h3.regular {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+p {
+  font-family: DM Sans;
+  font-weight: 300;
+}
+
+.display-1{
+  font-weight: 700;
 }
 
 li {
@@ -77,9 +128,18 @@ li {
   color: var(--blanco);
 }
 
+.black-text{
+
+  color: var(--negro);
+}
 .gris-100-text {
   color: var(--gris_100);
 }
+
+.gris-200-text {
+  color: var(--gris_200);
+}
+
 
 /* Nav bar */
 
@@ -89,9 +149,6 @@ li {
 
 }
 
-.navbar-dark, .navbar[data-bs-theme=dark] {
-  padding: 1rem;
-}
 
 /* Footer */
 
@@ -101,7 +158,7 @@ li {
     color: var(--negro);
     background-color: var(--amarillo);
     border-color: var(--amarillo);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 400;
     text-transform: uppercase;
     padding-left: 3rem;
@@ -111,10 +168,17 @@ li {
 
   }
   .btn-primary:hover {
-    color: ar(--blanco);
-    background-color: var(--negro);
-    border-color: var(--negro);
+    color: var(--negro);
+    background-color: var(--blanco);
+    border-color: var(--blanco);
   }
+
+
+  .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--blanco);
+    background-color: var(--negro);
+    border-color: var(--gris_100);
+}
   
   .btn-primary-2 {
     color: var(--negro);
@@ -161,6 +225,13 @@ li {
     border-color: var(--negro);
   }
 
+.btn-tertiary {
+
+  font-size: 0.8rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
   .nav-link {
 
     font-family: 'DM Sans', sans-serif;
@@ -169,4 +240,178 @@ li {
   }
 
 
+  /* Text Animation */
+
+  .text-animation {
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+  }
   
+  .text-animation ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+  
+    animation: scroll 100s linear infinite;
+  }
+  
+  .text-animation:hover ul {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+
+/* Animation of sections on scroll */
+
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.97);
+  filter: blur(1px);
+  transition: all 1900ms ease;
+  }
+.show {
+
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+/* Cards */
+
+.card {
+
+  border-radius: 20px !important;
+  height: 100%;
+  border-width: 0.5px;
+  border-color: var(--gris_100);
+}
+
+.card-body {
+  background-color: var(--negro);
+  padding: 30px;
+  border-width: 0.5px;
+  border-radius: 20px; 
+  color: var(--gris_100) !important;
+}
+
+/* 14. Selection Color */
+
+body p::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body p::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body p::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body h1::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h1::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h1::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body h2::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h2::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h2::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body h3::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h3::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h3::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body h4::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h4::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h4::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body h5::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h5::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body h5::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body a::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body a::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body a::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+body li::selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body li::-moz-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+body li::-webkit-selection {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+.rounded-50 {
+  border-radius: 50px;
+}
