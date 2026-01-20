@@ -1,3 +1,21 @@
+/* Animation of sections on scroll */
+
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.97);
+  filter: blur(1px);
+  transition: all 1900ms ease;
+  }
+.show {
+
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+/* body */
+
 
 html, body {
 
@@ -274,21 +292,6 @@ li {
   }
 
 
-/* Animation of sections on scroll */
-
-
-.hidden {
-  opacity: 0;
-  transform: scale(0.97);
-  filter: blur(1px);
-  transition: all 1900ms ease;
-  }
-.show {
-
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0);
-}
 /* Cards */
 
 .card {
