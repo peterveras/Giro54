@@ -56,6 +56,10 @@ footer {
 border-radius: 50px;
 }
 
+.rounded-4 {
+  border-radius: 100px;
+  }
+
 /* Color Palette */
 :root {
   
@@ -417,4 +421,57 @@ body li::-webkit-selection {
 }
 .rounded-50 {
   border-radius: 50px;
+}
+
+/* Hero section */
+
+.hero-section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center top;
+  background-color: var(--negro);
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://raw.githubusercontent.com/peterveras/Giro54/refs/heads/main/images/laptop-device.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Overlay gradient for better text readability */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0.3) 100%);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Events details */
+.event-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.event-details li {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.event-details i {
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 1rem;
 }
