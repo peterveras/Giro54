@@ -530,3 +530,9 @@ body li::-webkit-selection {
 .whatsapp-ico:hover{
   box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
 }
+
+/* hamburger icon */
+
+.navbar-toggler {
+    border: #0000;
+}
