@@ -536,3 +536,17 @@ body li::-webkit-selection {
 .navbar-toggler {
     border: #0000;
 }
+
+ /* Adjustment for header height */
+
+#host {
+  scroll-margin-top: 80px; /* Adjust this to match your header height */
+}
+
+#speaker {
+  scroll-margin-top: 80px; /* Adjust this to match your header height */
+}
+
+#ubicacion {
+  scroll-margin-top: 200px; /* Adjust this to match your header height */
+}
