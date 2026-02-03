@@ -548,5 +548,5 @@ body li::-webkit-selection {
 }
 
 #ubicacion {
-  scroll-margin-top: 200px; /* Adjust this to match your header height */
+  scroll-margin-top: 250px; /* Adjust this to match your header height */
 }
